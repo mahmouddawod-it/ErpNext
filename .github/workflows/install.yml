@@ -1,0 +1,18 @@
+name: ERPNext Installation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run installation script
+        run: |
+          bash install.sh
